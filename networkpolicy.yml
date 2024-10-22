@@ -1,0 +1,12 @@
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: nginxnetwork
+  namespace: krishan
+spec:
+  podSelector:
+    matchLabels:
+      app: home
+  ingress:
+  - ports:
+    - port: 81

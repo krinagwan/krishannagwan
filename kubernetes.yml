@@ -1,0 +1,20 @@
+apiVersion : v1 # aptserver version
+kind : Pod  #pod name
+metadata :    # data of data
+  name : dhondumulti
+  namespace : krishan   #namespace for pod
+spec :
+  containers :
+  - name : firefox  #firefox
+    image : linuxserver/firefox
+    ports :      # port for container
+      - containerPort : 3000  #container port
+  containers :
+  - name : nginx  #nginx
+    image : nginx
+    ports :      # port for container
+      - containerPort : 80  #container port
+    
+
+
+
